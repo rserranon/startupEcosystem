@@ -77,6 +77,15 @@
         </style>
     </head>
     <body>
+		
+        <div id="controller-list" role="navigation">
+            <h2>Available Controllers:</h2>
+            <ul>
+                <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+                    <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+                </g:each>
+            </ul>
+        </div>
 								
 
 		<!--
@@ -179,7 +188,9 @@
 					<div class="pure-u-1 pure-u-md-1-6">
 						<div class="stage-table stage-table-evangelists">
 							<ul class="stage-table-list">
-								<g:each var="r" in="${startupecosystem.Resource.findAll()}" >	
+								<g:set var="list" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources()}" scope="page"/>
+								${list}
+								<g:each var="r" in="${list}">	
 								     <li>
 										 <a href="http://www.twitter.com/${r.twitterAcct}">${r.resourceName}</a>										 
 									 </li>
