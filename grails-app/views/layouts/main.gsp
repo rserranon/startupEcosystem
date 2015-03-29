@@ -17,7 +17,6 @@
 		<!-->
 		<asset:stylesheet src="pure-release-0.6.0/pure-min.css"/>
 		<asset:stylesheet src="pure-release-0.6.0/grids-responsive-min.css"/>
-		<asset:stylesheet src="pure-layout-pricing/css/layouts/pricing.css"/>
 		<!--
 			Styles for the -canvas Idea Table  
 		<!-->
@@ -38,12 +37,10 @@
     </head>
 	
     <body>
-
-        <div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
         <g:layoutBody/>
         <div class="footer" role="contentinfo"></div>
-        <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+        <div id="spinner" class="spinner" style="display:none;">
+			<g:message code="spinner.alt" default="Loading&hellip;"/></div>
     </body>
-
 						
 </html>

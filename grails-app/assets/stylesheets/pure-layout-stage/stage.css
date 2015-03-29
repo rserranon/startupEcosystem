@@ -1,4 +1,72 @@
 /*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+    color: #526066;
+}
+
+h2, h3 {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+
+/*
+ * -- Layout Styles --
+ */
+.l-content {
+    margin: 0 auto;
+	background-color: rgb(215, 215, 212);
+}
+
+.l-box {
+    padding: 0.5em 2em;
+}
+
+/*
+ * -- MENU STYLES --
+ * Make the menu have a very faint box-shadow.
+ */
+.pure-menu {
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
+
+/*
+ * -- BANNER --
+ * The top banner with the headings. By using a combination
+ * of `display: table;` and `display: table-cell;`, we can
+ * vertically center the text.
+ */
+
+.banner {
+    background: transparent url('/assets/skinStartupEcosystem/BGRfrma.jpg') 0 0 no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/skinStartupEcosystem/BGRfrma.jpg', sizingMethod='scale');
+
+    height: 200px;
+    width: 100%;
+    margin-bottom: 3em;
+    display: table;
+}
+
+    .banner-head {
+        display: table-cell;
+        vertical-align: middle;
+        margin-bottom: 0;
+        font-size: 2em;
+        color: white;
+        font-weight: 500;
+        text-shadow: 0 1px 1px black;
+    }
+/*
  * -- STAGE WRAPPER --
  * This element wraps up all the stage table elements
  */
@@ -6,6 +74,7 @@
  .information {
     max-width: 980px;
     margin: 0 auto;
+	padding-left: 3px;
  }
 .stages-tables {
     margin-bottom: 0.425em;
@@ -20,6 +89,7 @@
     margin: 0px .1em .0em;
     padding: 0 0 0em;
 	padding-bottom: .6em;
+	
 }
 
 /*
@@ -36,6 +106,7 @@
 	text-align: left;
 	padding-bottom: 1em;
 	padding-left: 1em;
+	
 }
 
 .stage-table-inspire .stage-table-header {
@@ -93,6 +164,8 @@
     font-size: 1.4em;
     margin: 0.2em 0 0;
     font-weight: 100;
+	background-image: url('corregir.../assets/skinStartupEcosystem/idea.png');
+	background-size: contain;
 }
     .stage-table-price span {
         display: block;
@@ -159,3 +232,32 @@
     .footer a {
         color: #ddd;
     }
+	
+	
+	/*
+	 * -- TOOLTIP --
+	 * Styles for the Tooltip
+	 */
+	
+	a.tooltip {outline:none; }
+	a.tooltip strong {line-height:30px;}
+	a.tooltip:hover {text-decoration:none;} 
+	a.tooltip span {
+	    z-index:10;display:none; padding:14px 20px;
+	    margin-top:60px; margin-left:-160px;
+	    width:300px; line-height:16px;
+	}
+	a.tooltip:hover span{
+	    display:inline; position:absolute; 
+	    border:2px solid #FFF;  color:#EEE;
+	    background:#333 url(cssttp/css-tooltip-gradient-bg.png) repeat-x 0 0;
+	}
+	.callout {z-index:20;position:absolute;border:0;top:-14px;left:120px;}
+    
+	/*CSS3 extras*/
+	a.tooltip span
+	{
+	    border-radius:2px;        
+	    box-shadow: 0px 0px 8px 4px #666;
+	    /*opacity: 0.8;*/
+	}	

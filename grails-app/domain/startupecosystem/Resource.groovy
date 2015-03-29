@@ -5,7 +5,7 @@ class Resource {
 	
 	String resourceName
 	String resourceURL
-	String twitter
+	String twitterAcct
 	
     static constraints = {
     }
