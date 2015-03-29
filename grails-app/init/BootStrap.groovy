@@ -29,9 +29,9 @@ class BootStrap {
 		Taxonomy t0  = new Taxonomy(taxonomyName: "Twitter Taxonomy", phase: [evPh1]).save()
 		
 		Resource rStMedia1 = new Resource(resourceName: "Early Adopters", resourceURL: "http://earlyadopters.mx/",	twitterAcct: "N/A",				 taxonomy: [tx1]).save()
-		Resource rStMedia2 = new Resource(resourceName: "Emprendela", 	  resourceURL: "http://emprende.la/",		 twitterAcct: "N/A",				 taxonomy: [tx1]).save()		
+		Resource rStMedia2 = new Resource(resourceName: "Emprendela", 	  resourceURL: "http://emprende.la/",		twitterAcct: "N/A",				 taxonomy: [tx1]).save()		
 		Resource rSMedia3  = new Resource(resourceName: "Invent", 		  resourceURL: "http://invent.mx/",			twitterAcct: "N/A",				taxonomy: [tx1]).save()		
-		Resource rsTw1 	   = new Resource(resourceName: "Roberto Serrano",resourceURL: "", 							twitterAcct: "@StartupsPal",	taxonomy:  [t0]).save()
+		Resource rsTw1 	   = new Resource(resourceName: "Roberto Serrano",resourceURL: "N/A", 						twitterAcct: "@StartupsPal",	taxonomy:  [t0]).save()
 		
     }
     def destroy = {
