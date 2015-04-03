@@ -10,6 +10,9 @@ h2, h3 {
     letter-spacing: 0.25em;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 1em;
+    color: white;
+    margin-left: 13px;
 }
 
 p {
@@ -23,6 +26,7 @@ p {
 .l-content {
     margin: 0 auto;
 	background-color: rgb(215, 215, 212);
+	width: 100%;
 }
 
 .l-box {
@@ -72,13 +76,14 @@ p {
  */
  .stages-tables,
  .information {
-    max-width: 980px;
+    max-width: 100%;
     margin: 0 auto;
 	padding-left: 3px;
  }
 .stages-tables {
     margin-bottom: 0.425em;
-    text-align: center;
+    text-align: left;
+	background: #B8B3B3;
 }
 
 /*
@@ -86,11 +91,33 @@ p {
  * Every stage table has the .stage class
  */
 .stage-table {
-    margin: 0px .1em .0em;
+	margin: 1px .5em .5em;
     padding: 0 0 0em;
-	padding-bottom: .6em;
-	
+	box-shadow: 3px 3px 1px #888888;
 }
+
+
+/*
+ * -- STAGE TABLE HEADER --
+ * By default, a header is black/white, and has some styles for its <h2> name.
+ */
+.stage-table-header {
+	padding-top: .4em;
+	padding-bottom: .4em;
+    background: #E20C1C;
+    color: #fff;
+}
+    .stage-table-header h2 {
+        margin: 0;
+        padding-top: .5em;
+        font-size: 1.2em;
+        font-weight: bold;
+		  padding: 20px;
+		  font-size: 1em;
+		  color: white;
+		  margin-left: 13PX;
+    }
+
 
 /*
  * -- STAGE TABLE HEADER COLORS --
@@ -100,28 +127,28 @@ p {
 .stage-table-idea .stage-table-header {
 	margin: 0 auto;
 	padding-top: 0.8em;
-	font-size: 1.3em;
+	font-size: 1em;
 	font-weight: bold;
-    background: #E20C1C;
 	text-align: left;
 	padding-bottom: 1em;
 	padding-left: 1em;
+	background: #58A325;
 	
 }
 
-.stage-table-inspire .stage-table-header {
-    background: #58A325;
+.stage-table-inspire {
+    background: #E84684;
 }
 
-.stage-table-educate .stage-table-header {
-    background: #2E46E8;
+.stage-table-educate {
+    background: #E84684;
 }
 
-.stage-table-validate .stage-table-header {
-    background: #0D0D0D;
+.stage-table-validate  {
+    background: #E84684;
 }
 
-.stage-table-evangelists .stage-table-header {
+.stage-table-evangelists  {
 
 	padding-bottom: 1.8em;
 	background-image: url("/assets/skinStartupEcosystem/evangelists.jpg");
@@ -134,25 +161,10 @@ p {
 	background-repeat: no-repeat;
 	background-size: 65px 237px;
 	background-position: center;
+	  height: 13em;
 }
 
-/*
- * -- STAGE TABLE HEADER --
- * By default, a header is black/white, and has some styles for its <h2> name.
- */
-.stage-table-header {
-	padding-top: .4em;
-	padding-bottom: .4em;
-    background: #CF2854;
-    color: #fff;
-}
-    .stage-table-header h2 {
-        margin: 0;
-        padding-top: .5em;
-        font-size: 1.2em;
-        font-weight: normal;
 
-    }
 
 
 
@@ -184,10 +196,11 @@ p {
  * Each stage table has a <ul> which is denoted by the .stage-list class
  */
 .stage-table-list {
-    list-style-type: none;
+	background: white;
     margin: 0;
     padding: 0;
     text-align: center;
+
 }
 
 
@@ -199,7 +212,8 @@ p {
     padding: 0.4em 0;
 	text-align: left;
 	padding-left: .3em;
-    background: #f7f7f7;
+    list-style-type: none;
+    background: white;
     /*border-bottom: 1px solid #e7e7e7;*/
 }
 
@@ -216,7 +230,7 @@ p {
     border-radius: 2em;
     font-weight: bold;
     position: relative;
-    bottom: -1.5em;
+    bottom: -0.5em;
 }
 
 .information-head {
@@ -261,3 +275,138 @@ p {
 	    box-shadow: 0px 0px 8px 4px #666;
 	    /*opacity: 0.8;*/
 	}	
+
+
+
+
+
+	.pure-u-1,
+	.pure-u-1-1,
+	.pure-u-1-5,
+	.pure-u-2-5,
+	.pure-u-3-5,
+	.pure-u-4-5,
+	.pure-u-5-5 {
+	    display: inline-block;
+	    *display: inline;
+	    zoom: 1;
+	    letter-spacing: normal;
+	    word-spacing: normal;
+	    vertical-align: top;
+	    text-rendering: auto;
+	}
+
+	.pure-u-1-5 {
+	    width: 20%;
+	    *width: 19.9690%;
+	}
+
+	.pure-u-2-5 {
+	    width: 40%;
+	    *width: 39.9690%;
+	}
+
+	.pure-u-3-5 {
+	    width: 60%;
+	    *width: 59.9690%;
+	}
+
+	.pure-u-4-5 {
+	    width: 80%;
+	    *width: 79.9690%;
+	}
+
+	.pure-u-1,
+	.pure-u-1-1,
+	.pure-u-5-5 {
+	    width: 100%;
+	}
+
+	@media screen and (min-width: 48em) {
+	    .pure-u-md-1,
+	    .pure-u-md-1-1,
+	    .pure-u-md-1-5,
+	    .pure-u-md-2-5,
+	    .pure-u-md-3-5,
+	    .pure-u-md-4-5,
+	    .pure-u-md-5-5 {
+	        display: inline-block;
+	        *display: inline;
+	        zoom: 1;
+	        letter-spacing: normal;
+	        word-spacing: normal;
+	        vertical-align: top;
+	        text-rendering: auto;
+	    }
+
+	    .pure-u-md-1-5 {
+	        width: 20%;
+	        *width: 19.9690%;
+	    }
+
+	    .pure-u-md-2-5 {
+	        width: 40%;
+	        *width: 39.9690%;
+	    }
+
+	    .pure-u-md-3-5 {
+	        width: 60%;
+	        *width: 59.9690%;
+	    }
+
+	    .pure-u-md-4-5 {
+	        width: 80%;
+	        *width: 79.9690%;
+	    }
+
+	    .pure-u-md-1,
+	    .pure-u-md-1-1,
+	    .pure-u-md-5-5 {
+	        width: 100%;
+	    }
+	}
+
+	@media screen and (min-width: 80em) {
+	    .pure-u-xl-1,
+	    .pure-u-xl-1-1,
+	    .pure-u-xl-1-5,
+	    .pure-u-xl-2-5,
+	    .pure-u-xl-3-5,
+	    .pure-u-xl-4-5,
+	    .pure-u-xl-5-5 {
+	        display: inline-block;
+	        *display: inline;
+	        zoom: 1;
+	        letter-spacing: normal;
+	        word-spacing: normal;
+	        vertical-align: top;
+	        text-rendering: auto;
+	    }
+
+	    .pure-u-xl-1-5 {
+	        width: 20%;
+	        *width: 19.9690%;
+	    }
+
+	    .pure-u-xl-2-5 {
+	        width: 40%;
+	        *width: 39.9690%;
+	    }
+
+	    .pure-u-xl-3-5 {
+	        width: 60%;
+	        *width: 59.9690%;
+	    }
+
+	    .pure-u-xl-4-5 {
+	        width: 80%;
+	        *width: 79.9690%;
+	    }
+
+	    .pure-u-xl-1,
+	    .pure-u-xl-1-1,
+	    .pure-u-xl-5-5 {
+	        width: 100%;
+	    }
+	}
+
