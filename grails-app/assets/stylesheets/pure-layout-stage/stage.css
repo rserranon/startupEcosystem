@@ -90,18 +90,34 @@ p {
  * -- STAGE TABLE  --
  * Every stage table has the .stage class
  */
-.stage-table {
+.stage-table,
+ {
 	margin: 1px .5em .5em;
     padding: 0 0 0em;
 	box-shadow: 3px 3px 1px #888888;
 }
 
+.stage-table-idea {
+
+}
+
+.stage-table-launch {
+	background: green;
+}
+
+.stage-table-growth {
+	background: blue;
+}
 
 /*
  * -- STAGE TABLE HEADER --
  * By default, a header is black/white, and has some styles for its <h2> name.
  */
-.stage-table-header {
+.stage-table-header,
+.stage-table-header-idea,
+.stage-table-header-launch,
+.stage-table-header-growth
+ {
 	padding-top: .4em;
 	padding-bottom: .4em;
     background: #E20C1C;
@@ -118,6 +134,13 @@ p {
 		  margin-left: 13PX;
     }
 
+.stage-table-header-launch {
+	background: green;
+}
+
+.stage-table-header-growth {
+	background: blue;
+}
 
 /*
  * -- STAGE TABLE HEADER COLORS --
