@@ -200,7 +200,7 @@ p {
     margin: 0;
     padding: 0;
     text-align: center;
-
+	color: black;
 }
 
 
@@ -216,6 +216,11 @@ p {
     background: white;
     /*border-bottom: 1px solid #e7e7e7;*/
 }
+
+
+.l-box {
+        padding: 6px;
+    }
 
 
 /*
