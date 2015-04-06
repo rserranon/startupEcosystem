@@ -8,7 +8,7 @@ class BootStrap {
 		ProjectStage ps1 = new ProjectStage(projectStage: "Idea").save()
 		ProjectStage ps2 = new ProjectStage(projectStage: "Launch").save()
 		ProjectStage ps3 = new ProjectStage(projectStage: "Growth").save()
-		ProjectStage psEv = new ProjectStage(projectStage: "Evangelists").save()	
+		ProjectStage psEv = new ProjectStage(projectStage: "Global Resources").save()	
 		
 		// cargar las fases
 		Phase ideaPh1 = new Phase(phaseName: "Inspire", projectstage: 	[ps1]).save()

@@ -30,7 +30,8 @@ p {
 }
 
 .l-box {
-    padding: 0.5em 2em;
+    padding: 6px;
+
 }
 
 /*
@@ -74,27 +75,24 @@ p {
  * -- STAGE WRAPPER --
  * This element wraps up all the stage table elements
  */
- .stages-tables,
- .information {
+ .main-content {
     max-width: 100%;
-    margin: 0 auto;
-	padding-left: 3px;
- }
-.stages-tables {
-    margin-bottom: 0.425em;
+    margin: 3px	;
+	padding: 3px;	
     text-align: left;
 	background: #B8B3B3;
-}
+ }
 
 /*
  * -- STAGE TABLE  --
  * Every stage table has the .stage class
  */
-.stage-table,
+.stage-table
  {
 	margin: 1px .5em .5em;
+	margin-bottom: 0;
     padding: 0 0 0em;
-	box-shadow: 3px 3px 1px #888888;
+	box-shadow: 3px 3px 1px rgb(82, 83, 100);
 }
 
 .stage-table-idea {
@@ -116,7 +114,8 @@ p {
 .stage-table-header,
 .stage-table-header-idea,
 .stage-table-header-launch,
-.stage-table-header-growth
+.stage-table-header-growth,
+.stage-table-global-resources
  {
 	padding-top: .4em;
 	padding-bottom: .4em;
@@ -140,6 +139,10 @@ p {
 
 .stage-table-header-growth {
 	background: blue;
+}
+
+.stage-table-global-resources {
+	background: gray;
 }
 
 /*
@@ -240,10 +243,9 @@ p {
     /*border-bottom: 1px solid #e7e7e7;*/
 }
 
-
-.l-box {
-        padding: 6px;
-    }
+.lista-evangelistas{
+	margin-left: -12px;
+}
 
 
 /*
