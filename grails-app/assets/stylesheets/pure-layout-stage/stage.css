@@ -31,7 +31,8 @@ p {
 
 .l-box {
     padding: 6px;
-
+	margin-top: 45px;
+	background-color: white;
 }
 
 /*
@@ -77,8 +78,8 @@ p {
  */
  .main-content {
     max-width: 100%;
-    margin: 3px	;
-	padding: 3px;	
+    margin: 0px	;
+	padding: 0px;	
     text-align: left;
 	background: #B8B3B3;
  }
@@ -89,8 +90,10 @@ p {
  */
 .stage-table
  {
-	margin: 1px .5em .5em;
+	background: white;
+	margin: 15px;
 	margin-bottom: 0;
+	padding-bottom: 0;
     padding: 0 0 0em;
 	box-shadow: 3px 3px 1px rgb(82, 83, 100);
 }
@@ -117,14 +120,15 @@ p {
 .stage-table-header-growth,
 .stage-table-global-resources
  {
-	padding-top: .4em;
-	padding-bottom: .4em;
+	padding-top: 0em;
+	padding-bottom: 0em;
     background: #E20C1C;
     color: #fff;
 }
     .stage-table-header h2 {
         margin: 0;
-        padding-top: .5em;
+		margin-top: -30px;
+        padding-top: .2em;
         font-size: 1.2em;
         font-weight: bold;
 		  padding: 20px;
@@ -156,7 +160,7 @@ p {
 	font-size: 1em;
 	font-weight: bold;
 	text-align: left;
-	padding-bottom: 1em;
+	padding-bottom: 0em;
 	padding-left: 1em;
 	background: #58A325;
 	
@@ -175,8 +179,8 @@ p {
 }
 
 .stage-table-evangelists  {
-
-	padding-bottom: 1.8em;
+	margin-top: 15px;
+	padding-bottom: 0em;
 	background-image: url("/assets/skinStartupEcosystem/evangelists.jpg");
 	background: #E017D6;
 }
@@ -209,7 +213,7 @@ p {
         display: block;
         text-transform: uppercase;
         font-size: 0.2em;
-        padding-bottom: 2em;
+        padding-bottom: 0em;
         font-weight: 400;
         color: rgba(255, 255, 255, 0.5);
         *color: #fff;
@@ -222,11 +226,12 @@ p {
  * Each stage table has a <ul> which is denoted by the .stage-list class
  */
 .stage-table-list {
+	margin-top: 15px;
 	background: white;
-    margin: 0;
     padding: 0;
     text-align: center;
 	color: black;
+	font-size: .9em;
 }
 
 
@@ -244,7 +249,7 @@ p {
 }
 
 .lista-evangelistas{
-	margin-left: -12px;
+	margin-left: -19px;
 }
 
 

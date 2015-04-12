@@ -33,15 +33,15 @@ class BootStrap {
 		Resource rSMedia3  = new Resource(resourceName: "Invent", 		  resourceURL: 			"http://invent.mx/",			twitterAcct: "N/A",				taxonomy: [tx1]).save()		
 		Resource rsTw1 	   = new Resource(resourceName: "Roberto Serrano",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@StartupsPal",	taxonomy:  [t0]).save()
 		Resource rsTw2 	   = new Resource(resourceName: "Fernando Lelo de la Rea",resourceURL: 	"http://www.startupspal.com", 	twitterAcct: "@Ferlelo",		taxonomy:  [t0]).save()
-		Resource rsTw3 	   = new Resource(resourceName: "Cesar Salazar",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@CesarZalazar",	taxonomy:  [t0]).save()
+		Resource rsTw3 	   = new Resource(resourceName: "Cesar Salazar",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@Cesarsalazar",	taxonomy:  [t0]).save()
 		Resource rsTw4 	   = new Resource(resourceName: "Claudio Cossio",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@CCossio",		taxonomy:  [t0]).save()
 		Resource rsTw5 	   = new Resource(resourceName: "Roberto Serrano",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@StartupsPal",	taxonomy:  [t0]).save()
 		Resource rsTw6 	   = new Resource(resourceName: "Fernando Lelo de la Rea",resourceURL: 	"http://www.startupspal.com", 	twitterAcct: "@Ferlelo",		taxonomy:  [t0]).save()
-		Resource rsTw7 	   = new Resource(resourceName: "Cesar Salazar",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@CesarZalazar",	taxonomy:  [t0]).save()
+		Resource rsTw7 	   = new Resource(resourceName: "Cesar Salazar",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@Cesarsalazar",	taxonomy:  [t0]).save()
 		Resource rsTw8 	   = new Resource(resourceName: "Claudio Cossio",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@CCossio",		taxonomy:  [t0]).save()		
 		Resource rsTw9 	   = new Resource(resourceName: "Roberto Serrano",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@StartupsPal",	taxonomy:  [t0]).save()
 		Resource rsTw10    = new Resource(resourceName: "Fernando Lelo de la Rea",resourceURL: 	"http://www.startupspal.com", 	twitterAcct: "@Ferlelo",		taxonomy:  [t0]).save()
-		Resource rsTw11    = new Resource(resourceName: "Cesar Salazar",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@CesarZalazar",	taxonomy:  [t0]).save()
+		Resource rsTw11    = new Resource(resourceName: "Cesar Salazar",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@Cesarsalazar",	taxonomy:  [t0]).save()
 		Resource rsTw12    = new Resource(resourceName: "Claudio Cossio",resourceURL: 			"http://www.startupspal.com", 	twitterAcct: "@CCossio",		taxonomy:  [t0]).save()		
 		
     }
