@@ -1,6 +1,7 @@
 package startupecosystem
 
 class Taxonomy {
+	static belongsTo = [phase: Phase, metaresource: MetaResource]
 	
 	String taxonomyName
 	
@@ -9,6 +10,8 @@ class Taxonomy {
     static constraints = {
 		taxonomyName blank:false
 		resources nullable: true
+		phase nullable: true
+		metaresource nullable: true
     }
 	
 	String toString() {

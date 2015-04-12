@@ -2,17 +2,17 @@ package startupecosystem
 
 class MetaResource {
 	
-	String metaResource
+	String metaName
 	
 	
 	static hasMany = [taxonomies: Taxonomy]
 
     static constraints = {
-		metaResource blank: false;
+		metaName blank: false;
     }
 	
 	String toString() {
-	    return this.metaResource;
+	    return this.metaName;
 	}
 }
 

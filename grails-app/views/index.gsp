@@ -7,7 +7,19 @@
 		<asset:stylesheet src="pure-layout-stage/stage.css"/>		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
     </head>
-    <body class="pure-g" >		
+    <body class="pure-g" >	
+		
+        <div id="controller-list" role="navigation">
+            <h2>Available Controllers:</h2>
+            <ul>
+                <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+                    <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+                </g:each>
+            </ul>
+        </div>
+		
+		
+			
 		<div class="banner">
 			<h1 class="banner-head">
 				Startup Ecosystem Canvas:<br>
