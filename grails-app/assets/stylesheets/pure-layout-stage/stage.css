@@ -248,6 +248,15 @@ p {
     /*border-bottom: 1px solid #e7e7e7;*/
 }
 
+.stage-table-list table {
+    padding: 0.4em 0;
+	text-align: left;
+	padding-left: .3em;
+    list-style-type: none;
+    background: white;
+    /*border-bottom: 1px solid #e7e7e7;*/
+}
+
 .lista-evangelistas{
 	margin-left: -19px;
 }
