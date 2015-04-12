@@ -23,7 +23,7 @@
 						<div class="l-box">
 							<h2>${pStage.projectStage}</h2>
 					
-							<div class="pure-u-md-7-24  stage-table-inspire">
+							<div class="pure-u-7-24  stage-table-inspire">
 								<h2>1. Inspire</h2>
 								<g:set var="inspireList" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources()}" scope="page"/>
 								<ul class="stage-table-list">	
@@ -34,13 +34,13 @@
 									</g:each>
 								</ul>
 							</div>	
-							<div class="pure-u-md-7-24 stage-table-educate">
+							<div class="pure-u-7-24 stage-table-educate">
 								<h2>2. Educate</h2>
 								<ul class="stage-table-list">	
 									<li>Roberto Serrano</li>
 								</ul>
 							</div>	
-							<div class="pure-u-md-7-24 stage-table-validate">
+							<div class="pure-u-7-24 stage-table-validate">
 								<h2>3. Validate</h2>
 								<ul class="stage-table-list">	
 									<li>Roberto Serrano</li>
@@ -54,15 +54,21 @@
 				
 				</div>	
 				<div class="pure-u-md-5-24 stage-table stage-table-list lista-evangelistas">
-					<ul class="stage-table-list">
-						<g:set var="list" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources().sort()}" scope="page"/>
-						<g:each var="r" in="${list}">	
-							<li>
-								<a href="http://www.twitter.com/${r.twitterAcct}">${r.resourceName}</a>										 
-							</li>
-						</g:each>					
-				</ul>		
-			</div>	
+						<table class"pure-table pure-table-bordered">
+							<g:set var="list" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources().sort()}" scope="page"/>
+							<g:each var="r" in="${list}">	
+							<tr>
+								<td>
+									${r.resourceName}
+																			 
+								</td>
+								<td>
+									<a href="http://www.twitter.com/${r.twitterAcct}">${r.twitterAcct}</a>
+								</td>	
+							</tr>		
+							</g:each>
+						</table>						
+				</div>	
 		</g:each>					
     </body>
 </html>
