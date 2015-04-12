@@ -2,14 +2,18 @@ package startupecosystem
 
 class ProjectStage {
 
-	String projectStage
+	String	stageNumber
+	String 	projectStage
 	
 	static hasMany = [phases: Phase]
 	
     static constraints = {
+		stageNumber blank:true
+		projectStage blank: false
+		phases nullable: true
     }
 	
 	String toString() {
-	    return this.projectStage;
+	    return this.stageNumber + ". "+ this.projectStage;
 	}
 }

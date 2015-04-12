@@ -3,14 +3,17 @@ package startupecosystem
 class Phase {
 	static belongsTo = [projectstage: ProjectStage]
 	
-	String phaseName
+	String	phaseNumber
+	String  phaseName
 	
 	static hasMany = [taxonomies: Taxonomy]
 
     static constraints = {
+		phaseNumber blank: false;
+		phaseName	blank: false;
     }
 	
 	String toString() {
-	    return this.phaseName;
+	    return this.phaseNumber + ". "+ this.phaseName;
 	}
 }

@@ -1,7 +1,6 @@
 package startupecosystem
 
 class Taxonomy {
-	static belongsTo = [phase: Phase]
 	
 	String taxonomyName
 	

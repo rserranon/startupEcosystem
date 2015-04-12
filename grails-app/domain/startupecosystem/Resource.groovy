@@ -9,8 +9,8 @@ class Resource {
 	
     static constraints = {
 		resourceName blank: false
-		resourceURL  url: true
-		twitterAcct  blank: false
+		resourceURL  url: true, blank: true
+		twitterAcct  blank: true
     }
 	
 	static mapping = {
