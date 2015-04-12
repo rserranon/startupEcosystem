@@ -7,34 +7,13 @@
 		<asset:stylesheet src="pure-layout-stage/stage.css"/>		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
     </head>
-    <body class="pure-g" >
-		
-		
-		<div class="pure-g">
-		        <div class="pure-u-16-24">
-		            <span>Msg goes here</span>
-		        </div>
-		        <div class="pure-u-8-24">
-		            <div class="pure-g">
-		                <div class="pure-u-1-2">
-		                    col 1
-		                </div>
-		                <div class="pure-u-1-2 l-box">
-		                    col 2
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		
-		
-		
-			<div class="banner">
-				<h1 class="banner-head">
-					Startup Ecosystem Canvas:<br>
-					Mexico
-				</h1>
-			</div>
-				
+    <body class="pure-g" >		
+		<div class="banner">
+			<h1 class="banner-head">
+				Startup Ecosystem Canvas:<br>
+				Mexico
+			</h1>
+		</div>				
 		<g:set var="projectStageList" value="${startupecosystem.ProjectStage.findAll()}" scope="page"/>
 		<g:each var="pStage" in="${projectStageList}">		
 			<div class="pure-u-1 pure-u-md-1 main-content">
@@ -73,13 +52,12 @@
 				
 				</div>	
 				<div class="pure-u-md-5-24 stage-table stage-table-list lista-evangelistas">
-					<table class"pure-table pure-table-bordered">
+					<table class"pure-table stage-table-list">
 						<g:set var="list" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources().sort()}" scope="page"/>
 						<g:each var="r" in="${list}">	
 						<tr>
 							<td>
-								${r.resourceName}
-																		 
+								${r.resourceName}										 
 							</td>
 							<td>
 								<a href="http://www.twitter.com/${r.twitterAcct}">${r.twitterAcct}</a>
