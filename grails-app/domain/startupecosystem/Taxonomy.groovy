@@ -8,7 +8,6 @@ class Taxonomy {
 
     static constraints = {
 		taxonomyName blank:false
-		phase nullable: false
 		resources nullable: true
     }
 	
