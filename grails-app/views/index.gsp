@@ -53,6 +53,10 @@
 				</div>	
 				<div class="pure-u-md-5-24 stage-table stage-table-list lista-evangelistas">
 					<table class"pure-table stage-table-list">
+						<tr>
+						    <th>Nombre</th>
+						    <th>twitter</th>
+						 </tr>
 						<g:set var="list" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources().sort()}" scope="page"/>
 						<g:each var="r" in="${list}">	
 						<tr>

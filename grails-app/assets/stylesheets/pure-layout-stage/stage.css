@@ -95,7 +95,7 @@ p {
 	margin-bottom: 0;
 	padding-bottom: 0;
     padding: 0 0 0em;
-	box-shadow: 3px 3px 1px rgb(82, 83, 100);
+	box-shadow: 5px 5px 5px rgb(82, 83, 100);
 }
 
 .stage-table-idea {
@@ -191,7 +191,7 @@ p {
 	background-repeat: no-repeat;
 	background-size: 65px 237px;
 	background-position: center;
-	  height: 13em;
+	height: 25em;
 }
 
 
@@ -249,10 +249,8 @@ p {
 }
 
 .stage-table-list table {
-    padding: 0.4em 0;
+	margin:	6px;	
 	text-align: left;
-	padding-left: .3em;
-    list-style-type: none;
     background: white;
     /*border-bottom: 1px solid #e7e7e7;*/
 }
