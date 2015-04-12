@@ -73,15 +73,20 @@
 				
 				</div>	
 				<div class="pure-u-md-5-24 stage-table stage-table-list lista-evangelistas">
-					
-					<ul class="stage-table-list">
+					<table class"pure-table pure-table-bordered">
 						<g:set var="list" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources().sort()}" scope="page"/>
 						<g:each var="r" in="${list}">	
-							<li>
+						<tr>
+							<td>
 								${r.resourceName}
-								<a href="http://www.twitter.com/${r.twitterAcct}">${r.twitterAcct}</a>										 
-							</li>
-						</g:each>					
+																		 
+							</td>
+							<td>
+								<a href="http://www.twitter.com/${r.twitterAcct}">${r.twitterAcct}</a>
+							</td>	
+						</tr>		
+						</g:each>
+					</table>					
 				</ul>		
 			</div>	
 		</g:each>					
