@@ -67,7 +67,8 @@
 								</td>	
 							</tr>		
 							</g:each>
-						</table>						
+						</table>
+												
 				</div>	
 		</g:each>					
     </body>
