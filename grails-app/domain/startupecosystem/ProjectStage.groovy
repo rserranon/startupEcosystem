@@ -8,7 +8,7 @@ class ProjectStage {
 	static hasMany = [phases: Phase]
 	
     static constraints = {
-		stageNumber blank:true
+		stageNumber nullable: false, blank:true
 		projectStage blank: false
 		phases nullable: true
     }
