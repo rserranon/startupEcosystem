@@ -32,32 +32,22 @@
 						
 							<h2>${pStage.projectStage}</h2>
 								<div class="pure-g"> <!-- grid de fases -->	
-									<div class="pure-u-23-24 pure-u-md-1-3 stage-table-inspire">  
-										<h2>1. Inspire</h2>
-										<ul class="stage-table-list">
-										<g:set var="taxonomiesList" value="${startupecosystem.Phase.findByPhaseName("Inspire").getTaxonomies()}" scope="page"/>
-											<g:each var="t" in="${taxonomiesList}">
-												<b><li>${t.taxonomyName}</li></b>	
-												<g:each var="r" in="${t.resources}">	
-													<li>
-														<a href="${r.resourceURL}">${r.resourceName}</a>										 
-													</li>
-												</g:each>
-											</g:each>	
-										</ul>
-									</div>	
-									<div class="pure-u-23-24 pure-u-md-1-3 stage-table-educate">
-										<h2>2. Educate</h2>
-										<ul class="stage-table-list">	
-											<li>Roberto Serrano</li>
-										</ul>
-									</div>	
-									<div class="pure-u-23-24 pure-u-md-1-3 stage-table-validate">
-										<h2>3. Validate</h2>
-										<ul class="stage-table-list">	
-											<li>Roberto Serrano</li>
-										</ul>
-									</div>
+									<g:each var="phase" in="${pStage.getPhases()}">
+										<div class="pure-u-23-24 pure-u-md-1-3 stage-table-inspire">  
+											<h2>${phase.phaseNumber}. ${phase.phaseName}</h2>
+											<ul class="stage-table-list">
+											<g:set var="taxonomiesList" value="${phase.getTaxonomies()}" scope="page"/>
+												<g:each var="t" in="${taxonomiesList}">
+													<b><li>${t.taxonomyName}</li></b>	
+													<g:each var="r" in="${t.resources}">	
+														<li>
+															<a href="${r.resourceURL}">${r.resourceName}</a>										 
+														</li>
+													</g:each>
+												</g:each>	
+											</ul>
+										</div>	
+									</g:each>	
 								</div>	<!-- end pure-g grid de fases -->	
 					</div> <!-- end pure-g pure-u-1 pure-u-md-1 -->	
 				</div>	
