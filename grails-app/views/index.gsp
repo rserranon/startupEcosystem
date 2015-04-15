@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Welcome to Grails</title>
+        <title>Startup Ecosystem Canvas Mexico</title>
 		<asset:stylesheet src="pure-release-0.6.0/pure-min.css"/>
 		<asset:stylesheet src="pure-release-0.6.0/grids-responsive-min.css"/>
 		<asset:stylesheet src="pure-layout-stage/stage.css"/>		
