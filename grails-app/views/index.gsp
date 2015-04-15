@@ -34,13 +34,16 @@
 								<div class="pure-g"> <!-- grid de fases -->	
 									<div class="pure-u-23-24 pure-u-md-1-3 stage-table-inspire">  
 										<h2>1. Inspire</h2>
-										<g:set var="inspireList" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources()}" scope="page"/>
-										<ul class="stage-table-list">	
-											<g:each var="r" in="${inspireList}">	
-												<li>
-													<a href="${r.resourceURL}">${r.resourceName}</a>										 
-												</li>
-											</g:each>
+										<ul class="stage-table-list">
+										<g:set var="taxonomiesList" value="${startupecosystem.Phase.findByPhaseName("Inspire").getTaxonomies()}" scope="page"/>
+											<g:each var="t" in="${taxonomiesList}">
+												<b><li>${t.taxonomyName}</li></b>	
+												<g:each var="r" in="${t.resources}">	
+													<li>
+														<a href="${r.resourceURL}">${r.resourceName}</a>										 
+													</li>
+												</g:each>
+											</g:each>	
 										</ul>
 									</div>	
 									<div class="pure-u-23-24 pure-u-md-1-3 stage-table-educate">
