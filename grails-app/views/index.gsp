@@ -24,22 +24,22 @@
 				Mexico
 			</h1>
 		</div>				
-		<g:set var="projectStageList" value="${startupecosystem.ProjectStage.findAll()}" scope="page"/>
+		<g:set var="projectStageList" value="${startupecosystem.ProjectStage.findAll().sort { it.stageNumber }}" scope="page"/>
 		<g:each var="pStage" in="${projectStageList}">		
 			<div class="pure-u-1 pure-u-md-1 main-content">
 				<div class="pure-u-md-3-5 stage-table stage-table-header-${pStage.projectStage.toLowerCase()}"> <!-- bloque de 3 etapas -->
 					<div class="pure-g pure-u-1">
 						
-							<h2>${pStage.projectStage}</h2>
+							<h2>${pStage.stageNumber}. ${pStage.projectStage}</h2>
 								<div class="pure-g"> <!-- grid de fases -->	
-									<g:each var="phase" in="${pStage.getPhases()}">
+									<g:each var="phase" in="${pStage.getPhases().sort { it.phaseNumber }}">
 										<div class="pure-u-23-24 pure-u-md-1-3 stage-table-inspire">  
 											<h2>${phase.phaseNumber}. ${phase.phaseName}</h2>
 											<ul class="stage-table-list">
-											<g:set var="taxonomiesList" value="${phase.getTaxonomies()}" scope="page"/>
+											<g:set var="taxonomiesList" value="${phase.getTaxonomies().sort { it.taxonomyName }}" scope="page"/>
 												<g:each var="t" in="${taxonomiesList}">
 													<b><li>${t.taxonomyName}</li></b>	
-													<g:each var="r" in="${t.resources}">	
+													<g:each var="r" in="${t.resources.sort { it.resourceName }}">	
 														<li>
 															<a href="${r.resourceURL}">${r.resourceName}</a>										 
 														</li>
@@ -60,7 +60,7 @@
 						    <th>Nombre</th>
 						    <th>twitter</th>
 						 </tr>
-						<g:set var="list" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources().sort()}" scope="page"/>
+						<g:set var="list" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources().sort { it.resourceName }}" scope="page"/>
 						<g:each var="r" in="${list}">	
 						<tr>
 							<td>
