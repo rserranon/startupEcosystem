@@ -94,6 +94,8 @@ p {
  {
 	background: white;
 	margin: 15px;
+    margin-left: 6px;
+    margin-right: 3px;
 	margin-bottom: 0;
 	padding-bottom: 0;
     padding: 0 0 0em;
@@ -260,7 +262,7 @@ p {
 }
 
 .lista-evangelistas{
-	margin-left: -19px;
+	margin-left: 0 px;
 }
 
 
