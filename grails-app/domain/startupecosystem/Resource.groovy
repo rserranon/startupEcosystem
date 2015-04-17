@@ -9,12 +9,12 @@ class Resource {
 	
     static constraints = {
 		resourceName blank: false
-		resourceURL  url: true, blank: true
-		twitterAcct  blank: true
+		resourceURL  url: true, nullable: true, blank: true
+		twitterAcct  nullable: true, blank: true
     }
 	
 	static mapping = {
-	        sort "resourceName"
+	        
 	    }
 	
 	String toString() {

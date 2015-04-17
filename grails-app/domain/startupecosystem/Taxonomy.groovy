@@ -15,6 +15,6 @@ class Taxonomy {
     }
 	
 	String toString() {
-	    return this.taxonomyName;
+	    return  (this.phase.toString() ?: '') + " " + (this.metaresource.toString() ?: '') + " " + this.taxonomyName;
 	}
 }
