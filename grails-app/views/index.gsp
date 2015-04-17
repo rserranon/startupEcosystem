@@ -3,6 +3,7 @@
     <head>
         <title>Startup Ecosystem Canvas Mexico</title>
 		<asset:stylesheet src="pure-release-0.6.0/pure-min.css"/>
+		<asset:stylesheet src="pure-release-0.6.0/tables.css"/>
 		<asset:stylesheet src="pure-release-0.6.0/grids-responsive-min.css"/>
 		<asset:stylesheet src="pure-layout-stage/stage.css"/>		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
@@ -55,12 +56,12 @@
 				
 				</div>	
 				<div class="pure-u-md-5-24 stage-table stage-table-list lista-evangelistas">
-					<table class"pure-table stage-table-list">
+					<table class="pure-table stage-table-list">
 						<tr>
 						    <th>Nombre</th>
 						    <th>twitter</th>
 						 </tr>
-						<g:set var="list" value="${startupecosystem.Taxonomy.findByTaxonomyName("Twitter Taxonomy").getResources().sort { it.resourceName }}" scope="page"/>
+						<g:set var="list" value="${startupecosystem.Taxonomy?.findByTaxonomyName("Twitter Taxonomy")?.getResources()?.sort { it.resourceName }}" scope="page"/>
 						<g:each var="r" in="${list}">	
 						<tr>
 							<td>

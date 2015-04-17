@@ -102,12 +102,20 @@ p {
 	box-shadow: 5px 5px 5px rgb(82, 83, 100);
 }
 
+   
+
 .stage-table-idea {
 
 }
 
+
 .stage-table-launch {
 	background: green;
+}
+.stage-table-launch h2 {
+	background: yellow;
+  	margin: 0;
+  	padding: 13px 0px 14px 0px;
 }
 
 .stage-table-growth {
@@ -235,7 +243,8 @@ p {
     padding: 0;
     text-align: center;
 	color: black;
-	font-size: .9em;
+	font-size: .8em;
+	padding-bottom: 2px;
 	margin-bottom: 0px;
 }
 
