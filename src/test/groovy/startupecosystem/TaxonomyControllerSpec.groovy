@@ -1,7 +1,5 @@
 package startupecosystem
 
-
-
 import grails.test.mixin.*
 import spock.lang.*
 

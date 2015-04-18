@@ -37,7 +37,7 @@
 										<div class="pure-u-23-24 pure-u-md-1-3 stage-table-inspire">  
 											<h2>${phase.phaseNumber}. ${phase.phaseName}</h2>
 											<ul class="stage-table-list">
-> 											<g:set var="taxonomiesList" value="${phase?.getTaxonomies().sort { it.taxonomyName }}" scope="page"/>
+ 											<g:set var="taxonomiesList" value="${phase?.getTaxonomies()?.sort { it.taxonomyName }}" scope="page"/>
 												<g:each var="t" in="${taxonomiesList}">
 													<b><li>${t.taxonomyName}</li></b>	
 													<g:each var="r" in="${t.resources.sort { it.resourceName }}">	
@@ -61,7 +61,7 @@
 						    <th>Nombre</th>
 						    <th>twitter</th>
 						 </tr>
-						<g:set var="list" value="${startupecosystem.Taxonomy?.findByTaxonomyName("Twitter Taxonomy")?.getResources()?.sort { it.resourceName }}" scope="page"/>
+						<g:set var="list" value="${startupecosystem.Taxonomy?.findByTaxonomyName("Active Entrepreneur Leaders")?.getResources()?.sort { it.resourceName }}" scope="page"/>
 						<g:each var="r" in="${list}">	
 						<tr>
 							<td>

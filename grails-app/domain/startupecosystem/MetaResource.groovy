@@ -4,11 +4,11 @@ class MetaResource {
 	
 	String metaName
 	
-	
 	static hasMany = [taxonomies: Taxonomy]
 
     static constraints = {
-		metaName blank: false;
+		metaName blank: false
+		
     }
 	
 	String toString() {
