@@ -57,21 +57,24 @@
 				</div>	
 				<div class="pure-u-md-5-24 stage-table stage-table-list lista-evangelistas">
 					<table class="pure-table stage-table-list">
-						<tr>
+						 <tr>
 						    <th>Nombre</th>
 						    <th>twitter</th>
 						 </tr>
-						<g:set var="list" value="${startupecosystem.Taxonomy?.findByTaxonomyName("Active Entrepreneur Leaders")?.getResources()?.sort { it.resourceName }}" scope="page"/>
-						<g:each var="r" in="${list}">	
-						<tr>
-							<td>
-								${r.resourceName}										 
-							</td>
-							<td>
-								<a href="http://www.twitter.com/${r.twitterAcct}">${r.twitterAcct}</a>
-							</td>	
-						</tr>		
-						</g:each>
+						 <g:set var="taxonomiesList" value="${pStage.metaResource?.getTaxonomies()?.sort { it.taxonomyName }}" scope="page"/>
+						 <g:each var="t" in="${taxonomiesList}">
+							 <b><li>${t.taxonomyName}</li></b>
+							 <g:each var="r" in="${t.resources.sort { it.resourceName }}">	
+								<tr>
+									<td>
+										${r.resourceName}										 
+									</td>
+									<td>
+										<a href="http://www.twitter.com/${r.twitterAcct}">${r.twitterAcct}</a>
+									</td>	
+								</tr>		
+							</g:each>
+						</g:each>	
 					</table>					
 				</ul>		
 			</div>	
