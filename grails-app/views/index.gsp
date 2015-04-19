@@ -57,20 +57,21 @@
 				</div>	
 				<div class="pure-u-md-5-24 stage-table stage-table-list lista-evangelistas">
 					<table class="pure-table stage-table-list">
-						 <tr>
-						    <th>Nombre</th>
-						    <th>twitter</th>
-						 </tr>
+						 
 						 <g:set var="taxonomiesList" value="${pStage.metaResource?.getTaxonomies()?.sort { it.taxonomyName }}" scope="page"/>
 						 <g:each var="t" in="${taxonomiesList}">
-							 <b><li>${t.taxonomyName}</li></b>
+							 <tr>
+								 <td>
+									 <b>${t.taxonomyName}</b>
+								 </td>	 
+							 </tr>
 							 <g:each var="r" in="${t.resources.sort { it.resourceName }}">	
 								<tr>
 									<td>
-										${r.resourceName}										 
+										<a href="${r.resourceURL}">${r.resourceName}</a>										 
 									</td>
 									<td>
-										<a href="http://www.twitter.com/${r.twitterAcct}">${r.twitterAcct}</a>
+										<a href="http://twitter.com/${r.twitterAcct}">${r.twitterAcct}</a>
 									</td>	
 								</tr>		
 							</g:each>
