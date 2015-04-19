@@ -34,7 +34,7 @@
 							<h2>${pStage.stageNumber}. ${pStage.projectStage}</h2>
 								<div class="pure-g"> <!-- grid de fases -->	
 									<g:each var="phase" in="${pStage.getPhases().sort { it.phaseNumber }}">
-										<div class="pure-u-23-24 pure-u-md-1-3 stage-table-inspire">  
+										<div class="pure-u-23-24 pure-u-md-1-3 stage-table-${phase.phaseName.toLowerCase()}">  
 											<h2>${phase.phaseNumber}. ${phase.phaseName}</h2>
 											<ul class="stage-table-list">
  											<g:set var="taxonomiesList" value="${phase?.getTaxonomies()?.sort { it.taxonomyName }}" scope="page"/>
@@ -52,25 +52,26 @@
 								</div>	<!-- end pure-g grid de fases -->	
 					</div> <!-- end pure-g pure-u-1 pure-u-md-1 -->	
 				</div>	
-				<div class="pure-u-md-2-24 stage-table stage-table-evangelists fondo">
+				<div class="pure-u-md-2-24 stage-table stage-table-${pStage.metaResource.metaName.toLowerCase()} fondo-${pStage.metaResource.metaName.toLowerCase()}">
 				
 				</div>	
-				<div class="pure-u-md-5-24 stage-table stage-table-list lista-evangelistas">
+				<div class="pure-u-md-5-24 stage-table stage-table-list lista-${pStage.metaResource.metaName.toLowerCase()}">
 					<table class="pure-table stage-table-list">
-						 <tr>
-						    <th>Nombre</th>
-						    <th>twitter</th>
-						 </tr>
+						 
 						 <g:set var="taxonomiesList" value="${pStage.metaResource?.getTaxonomies()?.sort { it.taxonomyName }}" scope="page"/>
 						 <g:each var="t" in="${taxonomiesList}">
-							 <b><li>${t.taxonomyName}</li></b>
+							 <tr>
+								 <td>
+									 <b>${t.taxonomyName}</b>
+								 </td>	 
+							 </tr>
 							 <g:each var="r" in="${t.resources.sort { it.resourceName }}">	
 								<tr>
 									<td>
-										${r.resourceName}										 
+										<a href="${r.resourceURL}">${r.resourceName}</a>										 
 									</td>
 									<td>
-										<a href="http://www.twitter.com/${r.twitterAcct}">${r.twitterAcct}</a>
+										<a href="http://twitter.com/${r.twitterAcct}">${r.twitterAcct}</a>
 									</td>	
 								</tr>		
 							</g:each>
