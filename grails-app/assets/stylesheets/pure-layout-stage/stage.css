@@ -335,6 +335,24 @@ p {
 	}	
 
 
+	a:link {
+	    color: darkslategray;
+	}
+
+	/* visited link */
+	a:visited {
+	    color: green;
+	}
+
+	/* mouse over link */
+	a:hover {
+	    color: red;
+	}
+
+	/* selected link */
+	a:active {
+	    color: yellow;
+	} 
 
 
 
