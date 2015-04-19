@@ -34,7 +34,7 @@
 							<h2>${pStage.stageNumber}. ${pStage.projectStage}</h2>
 								<div class="pure-g"> <!-- grid de fases -->	
 									<g:each var="phase" in="${pStage.getPhases().sort { it.phaseNumber }}">
-										<div class="pure-u-23-24 pure-u-md-1-3 stage-table-inspire">  
+										<div class="pure-u-23-24 pure-u-md-1-3 stage-table-${phase.phaseName.toLowerCase()}">  
 											<h2>${phase.phaseNumber}. ${phase.phaseName}</h2>
 											<ul class="stage-table-list">
  											<g:set var="taxonomiesList" value="${phase?.getTaxonomies()?.sort { it.taxonomyName }}" scope="page"/>
@@ -52,10 +52,10 @@
 								</div>	<!-- end pure-g grid de fases -->	
 					</div> <!-- end pure-g pure-u-1 pure-u-md-1 -->	
 				</div>	
-				<div class="pure-u-md-2-24 stage-table stage-table-evangelists fondo">
+				<div class="pure-u-md-2-24 stage-table stage-table-${pStage.metaResource.metaName.toLowerCase()} fondo-${pStage.metaResource.metaName.toLowerCase()}">
 				
 				</div>	
-				<div class="pure-u-md-5-24 stage-table stage-table-list lista-evangelistas">
+				<div class="pure-u-md-5-24 stage-table stage-table-list lista-${pStage.metaResource.metaName.toLowerCase()}">
 					<table class="pure-table stage-table-list">
 						 
 						 <g:set var="taxonomiesList" value="${pStage.metaResource?.getTaxonomies()?.sort { it.taxonomyName }}" scope="page"/>
