@@ -112,9 +112,11 @@ p {
 .stage-table-launch {
 	background: green;
 }
-.stage-table-launch h2 {
-  	margin: 0;
-  	padding: 13px 0px 14px 0px;
+.stage-table-launch   {
+	/*
+  		margin: 0;
+  		padding: 13px 0px 14px 0px;
+	*/
 }
 
 .stage-table-growth {
