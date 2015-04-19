@@ -4,7 +4,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'startu60_serrano'@'localhost' WITH GRANT OPTION;
 
 mysql --host=localhost --user='startu60_serrano' --password='oGo-S84-RLR-ogf' startu60_StartupEcosystemCanvas
 
-mysqldump -u 'startu60_serrano' --password='oGo-S84-RLR-ogf' startu60_StartupEcosystemCanvas > '/Users/proyectoweb/Documents/RSN/grails_apps/dumpfilename.sql'
+mysqldump -u 'startu60_serrano' --password='oGo-S84-RLR-ogf' --databases 'startu60_StartupEcosystemCanvas' > '/Users/proyectoweb/Documents/RSN/grails_apps/startupEcosystem/grails-app/conf/sql/DBbackup.sql'
 
 CREATE TEMPORARY TABLE SalesSummary (product_name VARCHAR(50) NOT NULL);
 
