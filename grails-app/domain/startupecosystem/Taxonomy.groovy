@@ -9,23 +9,25 @@ class Taxonomy {
 
     static constraints = {
 		
+		
+		
+		
+		taxonomyName blank:false
+		resources nullable: true
+		phase nullable: true
+		// TODO Improve custom validator
 		phase validator: { val, obj ->
 		                if (obj.phase && obj.metaresource) {     // one must be null
 							return ['only one: Phase or metaRerource can be selected']
 						}	                             
-		        }
-		
-		// TODO Implement custom validator
-		taxonomyName blank:false
-		resources nullable: true
-		phase nullable: true
+		        }		
 		metaresource nullable: true
     }
 	
 	String toString() {
 		// validate for null
 		if (this.phase) {
-				return this.phase.projectstage.toString() + "->" + this.phase.toString()  + " ->" + this.taxonomyName
+				return this.phase.toString()  + " ->" + this.taxonomyName
 		} else {
 				return this.metaresource.toString()  + " ->" + this.taxonomyName
 		}
