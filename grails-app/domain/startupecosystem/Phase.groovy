@@ -14,6 +14,6 @@ class Phase {
     }
 	
 	String toString() {
-	    return this.phaseNumber + ". "+ this.phaseName;
+	    return this.projectstage.toString() + "-> " + this.phaseNumber + ". "+ this.phaseName;
 	}
 }

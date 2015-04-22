@@ -3,9 +3,9 @@ package startupecosystem
 import grails.test.mixin.*
 import spock.lang.*
 
-@TestFor(PhaseController)
-@Mock(Phase)
-class PhaseControllerSpec extends Specification {
+@TestFor(MetaResourceControllerController)
+@Mock(MetaResourceController)
+class MetaResourceControllerControllerSpec extends Specification {
 
     def populateValidParams(params) {
         assert params != null
@@ -19,8 +19,8 @@ class PhaseControllerSpec extends Specification {
             controller.index()
 
         then:"The model is correct"
-            !model.phaseList
-            model.phaseCount == 0
+            !model.metaResourceControllerList
+            model.metaResourceControllerCount == 0
     }
 
     void "Test the create action returns the correct model"() {
@@ -28,7 +28,7 @@ class PhaseControllerSpec extends Specification {
             controller.create()
 
         then:"The model is correctly created"
-            model.phase!= null
+            model.metaResourceController!= null
     }
 
     void "Test the save action correctly persists an instance"() {
@@ -36,25 +36,25 @@ class PhaseControllerSpec extends Specification {
         when:"The save action is executed with an invalid instance"
             request.contentType = FORM_CONTENT_TYPE
             request.method = 'POST'
-            def phase = new Phase()
-            phase.validate()
-            controller.save(phase)
+            def metaResourceController = new MetaResourceController()
+            metaResourceController.validate()
+            controller.save(metaResourceController)
 
         then:"The create view is rendered again with the correct model"
-            model.phase!= null
+            model.metaResourceController!= null
             view == 'create'
 
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
-            phase = new Phase(params)
+            metaResourceController = new MetaResourceController(params)
 
-            controller.save(phase)
+            controller.save(metaResourceController)
 
         then:"A redirect is issued to the show action"
-            response.redirectedUrl == '/phase/show/1'
+            response.redirectedUrl == '/metaResourceController/show/1'
             controller.flash.message != null
-            Phase.count() == 1
+            MetaResourceController.count() == 1
     }
 
     void "Test that the show action returns the correct model"() {
@@ -66,11 +66,11 @@ class PhaseControllerSpec extends Specification {
 
         when:"A domain instance is passed to the show action"
             populateValidParams(params)
-            def phase = new Phase(params)
-            controller.show(phase)
+            def metaResourceController = new MetaResourceController(params)
+            controller.show(metaResourceController)
 
         then:"A model is populated containing the domain instance"
-            model.phase == phase
+            model.metaResourceController == metaResourceController
     }
 
     void "Test that the edit action returns the correct model"() {
@@ -82,11 +82,11 @@ class PhaseControllerSpec extends Specification {
 
         when:"A domain instance is passed to the edit action"
             populateValidParams(params)
-            def phase = new Phase(params)
-            controller.edit(phase)
+            def metaResourceController = new MetaResourceController(params)
+            controller.edit(metaResourceController)
 
         then:"A model is populated containing the domain instance"
-            model.phase == phase
+            model.metaResourceController == metaResourceController
     }
 
     void "Test the update action performs an update on a valid domain instance"() {
@@ -96,28 +96,28 @@ class PhaseControllerSpec extends Specification {
             controller.update(null)
 
         then:"A 404 error is returned"
-            response.redirectedUrl == '/phase/index'
+            response.redirectedUrl == '/metaResourceController/index'
             flash.message != null
 
         when:"An invalid domain instance is passed to the update action"
             response.reset()
-            def phase = new Phase()
-            phase.validate()
-            controller.update(phase)
+            def metaResourceController = new MetaResourceController()
+            metaResourceController.validate()
+            controller.update(metaResourceController)
 
         then:"The edit view is rendered again with the invalid instance"
             view == 'edit'
-            model.phase == phase
+            model.metaResourceController == metaResourceController
 
         when:"A valid domain instance is passed to the update action"
             response.reset()
             populateValidParams(params)
-            phase = new Phase(params).save(flush: true)
-            controller.update(phase)
+            metaResourceController = new MetaResourceController(params).save(flush: true)
+            controller.update(metaResourceController)
 
         then:"A redirect is issued to the show action"
-            phase != null
-            response.redirectedUrl == "/phase/show/$phase.id"
+            metaResourceController != null
+            response.redirectedUrl == "/metaResourceController/show/$metaResourceController.id"
             flash.message != null
     }
 
@@ -128,23 +128,23 @@ class PhaseControllerSpec extends Specification {
             controller.delete(null)
 
         then:"A 404 is returned"
-            response.redirectedUrl == '/phase/index'
+            response.redirectedUrl == '/metaResourceController/index'
             flash.message != null
 
         when:"A domain instance is created"
             response.reset()
             populateValidParams(params)
-            def phase = new Phase(params).save(flush: true)
+            def metaResourceController = new MetaResourceController(params).save(flush: true)
 
         then:"It exists"
-            Phase.count() == 1
+            MetaResourceController.count() == 1
 
         when:"The domain instance is passed to the delete action"
-            controller.delete(phase)
+            controller.delete(metaResourceController)
 
         then:"The instance is deleted"
-            Phase.count() == 0
-            response.redirectedUrl == '/phase/index'
+            MetaResourceController.count() == 0
+            response.redirectedUrl == '/metaResourceController/index'
             flash.message != null
     }
 }
